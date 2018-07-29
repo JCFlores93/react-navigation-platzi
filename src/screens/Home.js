@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native'
+import { StackActions } from 'react-navigation'
 
 export default class Home extends Component {
   handlePress = () => {
     this.props.navigation.navigate('Login')
+    this.props.navigation.dispatch(
+      StackActions.push({
+        routeName: 'Login'
+      })
+    )
   }
   render() {
     return (
