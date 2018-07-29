@@ -6,10 +6,26 @@ import About from './src/screens/About'
 import Profile from './src/screens/Profile'
 
 const AppNavigator = createStackNavigator({
-  Home,
+  Home: {
+    screen: Home,
+    path: 'home/',
+    navigationOptions: {
+      title: 'Esta es la Home'
+    }
+  },
   About,
   Profile,
   Login
+},
+{
+  initialRouteName: 'Login',
+  navigationOptions: {
+    title: 'Un título genérico'
+  },
+  initialRouteKey: 'login',
+  initialRouteParams: {
+    nombre: 'Jean Carlo Flores'
+  }
 })
 
 export default AppNavigator
