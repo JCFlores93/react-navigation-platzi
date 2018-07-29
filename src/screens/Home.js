@@ -2,12 +2,16 @@ import React, {Component} from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native'
 
 export default class Home extends Component {
+  handlePress = () => {
+    this.props.navigation.navigate('Login')
+  }
   render() {
     return (
       <View style={styles.container}>
         <Text> Home </Text>
         <Button
             title="Ir al login"
+            onPress={this.handlePress}
         />
       </View>
     )
