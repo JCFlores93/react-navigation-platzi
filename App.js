@@ -33,7 +33,17 @@ const AppNavigator = createStackNavigator({
   initialRouteKey: 'login',
   initialRouteParams: {
     nombre: 'Jean Carlo Flores'
-  }
+  },
+  headerMode: 'screen',
+  mode: 'card',
+  cardStyle: {
+    borderWidth: 2,
+    //backgroundColor: 'red'
+    
+  },
+  //headerTransitionPreset: 'fade-in-place',
+  headerTransitionPreset: 'uikit',
+
 })
 
 export default AppNavigator
