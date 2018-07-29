@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import { 
+  Text
+} from 'react-native'
 import { createStackNavigator } from 'react-navigation'
 import Home from './src/screens/Home'
 import Login from './src/screens/Login'
@@ -20,7 +23,12 @@ const AppNavigator = createStackNavigator({
 {
   initialRouteName: 'Login',
   navigationOptions: {
-    title: 'Un título genérico'
+    title: 'Un título genérico',
+    headerTitleAllowFontScaling: true,
+    //header: <Text style={{color: 'white'}}>Esto es un header</Text>
+    headerBackTitle: 'Atrás',
+    gesturesEnabled: true,
+    headerBackImage: <Text>{`<=`}</Text>
   },
   initialRouteKey: 'login',
   initialRouteParams: {
