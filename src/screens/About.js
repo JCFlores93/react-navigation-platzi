@@ -3,7 +3,9 @@ import { Text, View, StyleSheet, Button } from 'react-native'
 
 export default class About extends Component {
   handlePress = () => {
-    this.props.navigation.navigate('Profile')
+    this.props.navigation.navigate('Profile', {
+      name: 'Nalia Pascual'
+    })
   }
   render() {
     return (
