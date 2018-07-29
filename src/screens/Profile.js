@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet, Button } from 'react-native'
+import Name from '../profile/components/name';
 
 export default class Profile extends Component {
   handlePress = () => {
@@ -30,6 +31,7 @@ export default class Profile extends Component {
             title="Cambiar nombre"
             onPress={this.setParams}
         />
+        <Name />
       </View>
     )
   }
