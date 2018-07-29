@@ -8,7 +8,7 @@ export default class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text> Login { this.props.navigation.state.params.nombre}</Text>
+        <Text> Login </Text>
         <Button
             title="Ir al About"
             onPress={this.handlePress}

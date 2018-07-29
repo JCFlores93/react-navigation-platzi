@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import { 
+import React, { Component } from 'react';
+import {
   Text
 } from 'react-native'
 import { createStackNavigator } from 'react-navigation'
@@ -18,32 +18,44 @@ const AppNavigator = createStackNavigator({
   },
   About,
   Profile,
-  Login
 },
-{
-  initialRouteName: 'Login',
-  navigationOptions: {
-    title: 'Un título genérico',
-    headerTitleAllowFontScaling: true,
-    //header: <Text style={{color: 'white'}}>Esto es un header</Text>
-    headerBackTitle: 'Atrás',
-    gesturesEnabled: true,
-    headerBackImage: <Text>{`<=`}</Text>
-  },
-  initialRouteKey: 'login',
-  initialRouteParams: {
-    nombre: 'Jean Carlo Flores'
-  },
-  headerMode: 'screen',
-  mode: 'card',
-  cardStyle: {
-    borderWidth: 2,
-    //backgroundColor: 'red'
-    
-  },
-  //headerTransitionPreset: 'fade-in-place',
-  headerTransitionPreset: 'uikit',
+  {
+    initialRouteName: 'Home',
+    navigationOptions: {
+      title: 'Un título genérico',
+      headerTitleAllowFontScaling: true,
+      //header: <Text style={{color: 'white'}}>Esto es un header</Text>
+      headerBackTitle: 'Atrás',
+      gesturesEnabled: true,
+      headerBackImage: <Text>{`<=`}</Text>
+    },
+    initialRouteKey: 'home',
+    initialRouteParams: {
+      nombre: 'Jean Carlo Flores'
+    },
+    headerMode: 'screen',
+    mode: 'card',
+    cardStyle: {
+      borderWidth: 2,
+      //backgroundColor: 'red'
 
-})
+    },
+    //headerTransitionPreset: 'fade-in-place',
+    headerTransitionPreset: 'uikit',
 
-export default AppNavigator
+  })
+
+const Main = createStackNavigator(
+  {
+    Main: {
+      screen: AppNavigator
+    },
+    Login: {
+      screen: Login
+    }
+  },
+  {
+    mode: 'modal',
+    headerMode: 'none'
+  })
+export default Main
